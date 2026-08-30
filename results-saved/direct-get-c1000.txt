@@ -1,0 +1,14 @@
+Running 15s test @ http://localhost:8081/api/history
+  4 threads and 1000 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46s   506.63ms   2.00s    80.11%
+    Req/Sec    87.74     35.67   200.00     68.12%
+  Latency Distribution
+     50%    1.62s 
+     75%    1.82s 
+     90%    1.93s 
+     99%    2.00s 
+  5223 requests in 15.01s, 2.82GB read
+  Socket errors: connect 0, read 0, write 0, timeout 3810
+Requests/sec:    347.98
+Transfer/sec:    192.40MB
