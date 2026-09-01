@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package messenger;
+
+option go_package = "highloadgram/api;messengerpb";
+
+service Messenger {
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+  rpc Subscribe(SubscribeRequest) returns (stream ChatMessage);
+}
+
+message SendMessageRequest {
+  string from = 1;
+  string to = 2;
+  string text = 3;
+}
+
+message SendMessageResponse {
+  bool delivered = 1;
+}
+
+message SubscribeRequest {
+  string username = 1;
+}
+
+message ChatMessage {
+  string from = 1;
+  string to = 2;
+  string text = 3;
+  int64 sent_at_unix = 4;
+}

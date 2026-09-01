@@ -2,6 +2,8 @@
 
 ## Запуск
 
+### API Gateway
+
 Через докер:
 ```bash
 docker compose up --build -d
@@ -36,6 +38,32 @@ docker compose logs -f nginx backend-1 backend-2
 ```bash
 docker compose down
 ```
+
+### Checkpoint 2 — gRPC Messenger
+
+Запуск gRPC-сервера:
+
+```bash
+go run ./cmd/messenger-server
+```
+
+Сервер запускается на `localhost:50051`.
+
+Для демонстрации запустим два терминала.
+
+Клиент Alice:
+
+```bash
+go run ./cmd/messenger-client -username alice -peer bob
+```
+
+Клиент Bob:
+
+```bash
+go run ./cmd/messenger-client -username bob -peer alice
+```
+
+После подключения можно смело общаться!
 
 ## Результаты нагрузочного тестирования
 
