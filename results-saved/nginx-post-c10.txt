@@ -1,0 +1,13 @@
+Running 15s test @ http://localhost:8090/api/generate
+  4 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.46ms   14.25ms  66.89ms   82.82%
+    Req/Sec   233.58     28.23   343.00     68.67%
+  Latency Distribution
+     50%    5.57ms
+     75%   14.48ms
+     90%   38.09ms
+     99%   55.17ms
+  13984 requests in 15.04s, 1.68GB read
+Requests/sec:    929.69
+Transfer/sec:    114.63MB
